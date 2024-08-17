@@ -1,0 +1,50 @@
+{% extends "inicio/encabezado.html" %}
+
+
+
+{% block imagen%}
+
+{% load static%}
+{% static 'inicio/images/home.png' %}
+
+{% endblock%}
+
+{% block contenido %}
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Foto</th>
+			<th>Matricula</th>
+			<th>Nombre</th>
+			<th>Carrera</th>
+			<th>Turno</th>
+		</tr>
+	</thead>
+<tbody>
+	<tr>
+		<td class="text-center">
+			<img src="" alt="" class="img-media">
+		</td>
+		<td class="text-semibold">UTM1234TIC</td>
+		<td class="muted">Nathalia</td>
+			<td class="muted">TIC</td>
+				<td class="muted">Matuttino</td>
+	</tr>
+</table>
+			<!--Encabezdo -->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>Alumnos
+				    <small>Lista de Alumnos </small></h3>
+				</div>
+
+				
+			</div>
+			<!-- /Encabezado-->
+
+
+	</div>
+{% endblock %}
+
+

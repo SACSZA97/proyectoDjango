@@ -1,0 +1,52 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} PRINCIPAL {% endblock %}
+
+{% block imagen%}
+
+{% load static%}
+{% static 'inicio/images/home.png' %}
+
+{% endblock%}
+
+{% block contenido %}
+
+<div class="page-header">
+	<div class="page-title">
+		<h3>Consultar Contacto
+		<small>UTM</small></h3>
+	</div>
+
+	
+	
+</div>
+
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Usuario</th>
+						<th>Mensaje</th>
+						<th>Editar</th>
+						<th>Eliminar</th>
+					</tr>
+				</thead>
+			  <tbody>
+				{% for comentarios in comentarios %}
+				<tr>
+					<td class="muted">{{comentarios.usuario}}</td>
+					<td class="muted">{{comentarios.mensaje}}</td>
+					<td class="muted">
+                        <a href="{% url 'ConsultaIndividual' comentarios.id %}">Editar</a>
+                    </td>
+					<td class="muted">
+						<a href="{% url 'Eliminar' comentarios.id %}">Eliminar</a>
+					</td>
+				</tr>
+				{% endfor%}
+			 </tbody>
+			</table><br>
+
+
+{% endblock %}
+
+
